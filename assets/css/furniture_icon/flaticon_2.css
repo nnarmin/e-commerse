@@ -1,0 +1,431 @@
+@font-face {
+    font-family: "Flaticon2";
+    src: url("../../fonts/furniture_icon/Flaticon_2.eot");
+    src: url("../../fonts/furniture_icon/Flaticon_2.eot?#iefix") format("embedded-opentype"),
+         url("../../fonts/furniture_icon/Flaticon_2.woff2") format("woff2"),
+         url("../../fonts/furniture_icon/Flaticon_2.woff") format("woff"),
+         url("../../fonts/furniture_icon/Flaticon_2.ttf") format("truetype"),
+         url("../../fonts/furniture_icon/Flaticon_2.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: "Flaticon2";
+        src: url("../../fonts/furniture_icon/Flaticon_2.svg#Flaticon") format("svg");
+    }
+}
+
+.flaticon2:before {
+  display: inline-block;
+  font-family: "Flaticon2";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+}
+
+
+.flaticon2-001-bathtub:before {
+    content: "\f100";
+}
+
+.flaticon2-002-soap:before {
+    content: "\f101";
+}
+
+.flaticon2-003-single-bed:before {
+    content: "\f102";
+}
+
+.flaticon2-004-single-bed:before {
+    content: "\f103";
+}
+
+.flaticon2-005-double-bed:before {
+    content: "\f104";
+}
+
+.flaticon2-006-double-bed:before {
+    content: "\f105";
+}
+
+.flaticon2-007-bookshelf:before {
+    content: "\f106";
+}
+
+.flaticon2-008-bookshelf:before {
+    content: "\f107";
+}
+
+.flaticon2-009-bunk-bed:before {
+    content: "\f108";
+}
+
+.flaticon2-010-wardrobe:before {
+    content: "\f109";
+}
+
+.flaticon2-011-bathroom:before {
+    content: "\f10a";
+}
+
+.flaticon2-012-bathroom:before {
+    content: "\f10b";
+}
+
+.flaticon2-013-ceiling:before {
+    content: "\f10c";
+}
+
+.flaticon2-014-chair:before {
+    content: "\f10d";
+}
+
+.flaticon2-015-single-bed:before {
+    content: "\f10e";
+}
+
+.flaticon2-016-couch:before {
+    content: "\f10f";
+}
+
+.flaticon2-017-modern-chair:before {
+    content: "\f110";
+}
+
+.flaticon2-018-ceiling-lamp:before {
+    content: "\f111";
+}
+
+.flaticon2-019-design:before {
+    content: "\f112";
+}
+
+.flaticon2-020-desk:before {
+    content: "\f113";
+}
+
+.flaticon2-021-sofa-bed:before {
+    content: "\f114";
+}
+
+.flaticon2-022-dining-table:before {
+    content: "\f115";
+}
+
+.flaticon2-023-double-bed:before {
+    content: "\f116";
+}
+
+.flaticon2-024-wardrobe:before {
+    content: "\f117";
+}
+
+.flaticon2-025-double:before {
+    content: "\f118";
+}
+
+.flaticon2-026-cabinet:before {
+    content: "\f119";
+}
+
+.flaticon2-027-dressing-table:before {
+    content: "\f11a";
+}
+
+.flaticon2-028-dressing-table:before {
+    content: "\f11b";
+}
+
+.flaticon2-029-chair:before {
+    content: "\f11c";
+}
+
+.flaticon2-030-lamp:before {
+    content: "\f11d";
+}
+
+.flaticon2-031-stool:before {
+    content: "\f11e";
+}
+
+.flaticon2-032-stool:before {
+    content: "\f11f";
+}
+
+.flaticon2-033-kitchen:before {
+    content: "\f120";
+}
+
+.flaticon2-034-kitchen:before {
+    content: "\f121";
+}
+
+.flaticon2-035-kitchen:before {
+    content: "\f122";
+}
+
+.flaticon2-036-kitchen:before {
+    content: "\f123";
+}
+
+.flaticon2-037-lamp:before {
+    content: "\f124";
+}
+
+.flaticon2-038-lamp:before {
+    content: "\f125";
+}
+
+.flaticon2-039-sofa:before {
+    content: "\f126";
+}
+
+.flaticon2-040-locker:before {
+    content: "\f127";
+}
+
+.flaticon2-041-mirror:before {
+    content: "\f128";
+}
+
+.flaticon2-042-stool:before {
+    content: "\f129";
+}
+
+.flaticon2-043-chair:before {
+    content: "\f12a";
+}
+
+.flaticon2-044-minimal:before {
+    content: "\f12b";
+}
+
+.flaticon2-045-office-chair:before {
+    content: "\f12c";
+}
+
+.flaticon2-046-office-chair:before {
+    content: "\f12d";
+}
+
+.flaticon2-047-office-chair:before {
+    content: "\f12e";
+}
+
+.flaticon2-048-bench:before {
+    content: "\f12f";
+}
+
+.flaticon2-049-ceiling-lamp:before {
+    content: "\f130";
+}
+
+.flaticon2-050-desk:before {
+    content: "\f131";
+}
+
+.flaticon2-051-rocking-chair:before {
+    content: "\f132";
+}
+
+.flaticon2-052-modern-chair:before {
+    content: "\f133";
+}
+
+.flaticon2-053-cabinet:before {
+    content: "\f134";
+}
+
+.flaticon2-054-shoe-rack:before {
+    content: "\f135";
+}
+
+.flaticon2-055-bedside-table:before {
+    content: "\f136";
+}
+
+.flaticon2-056-bedside-table:before {
+    content: "\f137";
+}
+
+.flaticon2-057-bedside-table:before {
+    content: "\f138";
+}
+
+.flaticon2-058-single-bed:before {
+    content: "\f139";
+}
+
+.flaticon2-059-sink:before {
+    content: "\f13a";
+}
+
+.flaticon2-060-chair:before {
+    content: "\f13b";
+}
+
+.flaticon2-061-chair:before {
+    content: "\f13c";
+}
+
+.flaticon2-062-wardrobe:before {
+    content: "\f13d";
+}
+
+.flaticon2-063-side-table:before {
+    content: "\f13e";
+}
+
+.flaticon2-064-sofa:before {
+    content: "\f13f";
+}
+
+.flaticon2-065-armchair:before {
+    content: "\f140";
+}
+
+.flaticon2-066-armchair:before {
+    content: "\f141";
+}
+
+.flaticon-067-armchair:before {
+    content: "\f142";
+}
+
+.flaticon2-068-armchair:before {
+    content: "\f143";
+}
+
+.flaticon2-069-sofa:before {
+    content: "\f144";
+}
+
+.flaticon2-070-fan:before {
+    content: "\f145";
+}
+
+.flaticon2-071-stool:before {
+    content: "\f146";
+}
+
+.flaticon2-072-wardrobe:before {
+    content: "\f147";
+}
+
+.flaticon2-073-table:before {
+    content: "\f148";
+}
+
+.flaticon2-074-table:before {
+    content: "\f149";
+}
+
+.flaticon2-075-armchair:before {
+    content: "\f14a";
+}
+
+.flaticon2-076-desk:before {
+    content: "\f14b";
+}
+
+.flaticon2-077-desk:before {
+    content: "\f14c";
+}
+
+.flaticon2-078-desk:before {
+    content: "\f14d";
+}
+
+.flaticon2-079-desk:before {
+    content: "\f14e";
+}
+
+.flaticon2-080-modern-chair:before {
+    content: "\f14f";
+}
+
+.flaticon2-081-table-lamp:before {
+    content: "\f150";
+}
+
+.flaticon2-082-tea-table:before {
+    content: "\f151";
+}
+
+.flaticon2-083-tea-table:before {
+    content: "\f152";
+}
+
+.flaticon2-084-tea-table:before {
+    content: "\f153";
+}
+
+.flaticon2-085-tea-table:before {
+    content: "\f154";
+}
+
+.flaticon2-086-sofa:before {
+    content: "\f155";
+}
+
+.flaticon2-087-cabinet:before {
+    content: "\f156";
+}
+
+.flaticon2-088-cabinet:before {
+    content: "\f157";
+}
+
+.flaticon2-089-couch:before {
+    content: "\f158";
+}
+
+.flaticon2-090-chair:before {
+    content: "\f159";
+}
+
+.flaticon2-091-shelf:before {
+    content: "\f15a";
+}
+
+.flaticon2-092-shelf:before {
+    content: "\f15b";
+}
+
+.flaticon2-093-wardrobe:before {
+    content: "\f15c";
+}
+
+.flaticon2-094-wardrobe:before {
+    content: "\f15d";
+}
+
+.flaticon2-095-wardrobe:before {
+    content: "\f15e";
+}
+
+.flaticon2-096-wardrobe:before {
+    content: "\f15f";
+}
+
+.flaticon2-097-wardrobe:before {
+    content: "\f160";
+}
+
+.flaticon2-098-window:before {
+    content: "\f161";
+}
+
+.flaticon2-099-curtains:before {
+    content: "\f162";
+}
+
+.flaticon2-100-desk:before {
+    content: "\f163";
+}
