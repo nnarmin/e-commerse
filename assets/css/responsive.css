@@ -12,7 +12,7 @@
     .head-phone span{
         font-size: 18px;
     }
-    .grid-item {
+    /*.grid-item {
         flex: 1 0 33.3333%;
     }
     .grid-item:nth-child(1), .grid-item:nth-child(2), .grid-item:nth-child(3){
@@ -29,7 +29,7 @@
     .grid-item:nth-child(15),
     .grid-item:nth-child(18){
         border-right: 0;
-    }
+    }*/
 }
 
 @media only screen and (max-width: 991px) and (min-width: 768px){
@@ -196,10 +196,6 @@
     .services{
         flex-direction: column;
     }
-    .service-item{
-        border-bottom: 1px solid #eee;
-        width: 100%;
-    }
     .basket-wrapper:before{
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
@@ -258,6 +254,9 @@
     .language-wrapper{
         display: none;
     }
+    .service-item h4{
+        font-size: 16px;
+    }
     .input-label{
         text-align: left;
         padding-top: 0;
@@ -310,6 +309,20 @@
     .section-title{
         font-size: 16px;
     }
+    .service-item h4 {
+        font-size: 10px;
+    }
+    .service-item:first-child h4{
+        top: 10px;
+        right: 10px;
+    }
+    .service-item:nth-child(2) h4{
+        top: 10px;
+    }
+    .service-item:nth-child(3) h4{
+        top: 10px;
+        left: 10px;
+    }
     .header-logo {
         max-width: 130px;
     }
@@ -320,17 +333,6 @@
         width: 34px;
         height: 34px;
         padding: 5px;
-    }
-    .service-banner{
-        flex-direction: column;
-    }
-    .service-item{
-        border-right: 0;
-    }
-    .service-item img {
-        max-height: 100px;
-        object-fit: contain;
-        border-right: none;
     }
     .user-account-header {
         padding: 7px 5px;
@@ -413,6 +415,14 @@
     }
     .info .btn-fb{
         margin: 0;
+    }
+    .address-list-wrapper{
+        position: relative;
+        width: 100%;
+    }
+    .address-list-wrapper .header-title{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 }
 

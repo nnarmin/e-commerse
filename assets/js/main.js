@@ -19,7 +19,7 @@ $(document).ready(function() {
     });
 
     /* Menu */
-    $(".category-name").click(function () {
+    $(".category-name").one("click", function (e) {
         /*if($(this).parents("header").hasClass("sidebar-xs")){
             var $this=$(this);
             $("header").addClass("open");
@@ -28,6 +28,7 @@ $(document).ready(function() {
                 $this.parent(".category").addClass("sub-menu-open");
             },300);
         }else{*/
+            e.preventDefault();
             $(".category").removeClass("sub-menu-open");
             $(this).parent(".category").addClass("sub-menu-open");
         /*}*/

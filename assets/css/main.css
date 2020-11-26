@@ -583,12 +583,12 @@ ul {
 
 .nav-sidebar .nav-link:not(.disabled):hover {
     background-color: var(--maincolor);
-    color: #000;
+    color: #fff;
 }
 
 .nav-sidebar > .nav-item-open > .nav-link:not(.disabled) {
     background-color: var(--maincolor);
-    color: #000;
+    color: #fff;
 }
 
 .nav-sidebar .nav-link i {
@@ -654,7 +654,7 @@ ul {
 }
 
 .nav-sidebar .nav-group-sub .nav-link {
-    padding: 0.625rem 1.25rem 0.625rem 2.5rem;
+    padding: 0.625rem 1.25rem 0.625rem 1.75rem;
     color: #000;
 }
 
@@ -1067,7 +1067,7 @@ ul {
     display: flex;
     -ms-flex-align: start;
     align-items: flex-start;
-    padding: .75rem 1.25rem;
+    padding: .6rem 1.25rem;
     transition: background-color ease-in-out .15s, color ease-in-out .15s;
 }
 
@@ -1080,11 +1080,18 @@ ul {
     color: #000;
 }
 
+.nav-sidebar .nav-link span{
+    display: flex;
+    align-items: center;
+}
+
 .nav-sidebar .nav-link i {
-    margin-right: 1.25rem;
+    font-size: 22px;
+    margin-right: 0.75rem;
     margin-top: .12502rem;
     margin-bottom: .12502rem;
     top: 0;
+    line-height: 1;
 }
 
 .nav-item-submenu > .nav-link:after {
@@ -1095,7 +1102,7 @@ ul {
     vertical-align: middle;
     line-height: 1;
     position: absolute;
-    top: .75rem;
+    top: 0.8rem;
     margin-top: .12502rem;
     right: 1.25rem;
     transition: -webkit-transform .25s ease-in-out;
@@ -1172,6 +1179,7 @@ ul {
 
 .user-account-title-mobile i {
     font-size: 20px;
+    color: #fff;
 }
 
 .user-account-header {
@@ -2656,8 +2664,7 @@ ul {
     letter-spacing: 0.8px;
     margin: 0;
     text-transform: capitalize;
-    border-bottom: 1px solid #f0f0f0;
-    padding: 10px 15px;
+    padding: 10px;
 }
 
 .wrapper-container {
@@ -4357,6 +4364,14 @@ body > .ui-pnotify-modal-overlay {
     right: 0;
     padding: 8px;
     z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+    transition: ease-in-out .2s;
+}
+
+.pr-wrapper:hover .wishlist-link {
+    visibility: visible;
+    opacity: 1;
 }
 
 .wishlist-link span {
@@ -4394,11 +4409,17 @@ body > .ui-pnotify-modal-overlay {
     font-size: 18px;
     font-weight: 700;
     color: #5d5d5d;
+    line-height: 1;
+    margin-top: 10px;
+}
+
+.pr-price .product-price{
+
 }
 
 .pr-price .discount-price {
     color: #ff4c4c;
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 
 /* Product */
@@ -4738,8 +4759,16 @@ body > .ui-pnotify-modal-overlay {
     flex-basis: 105px;
 }
 
+.wishlist-add-basket{
+    flex-basis: 110px;
+}
+
 .wishlist-remove-wrapper {
     flex-basis: 80px;
+}
+
+.wishlist-pr-price .price{
+    font-weight: 500;
 }
 
 .wishlist-table > tbody,
@@ -4764,7 +4793,7 @@ body > .ui-pnotify-modal-overlay {
 .wishlist-stock,
 .wishlist-pr-price,
 .wishlist-pr-name {
-    padding: .75rem 1.25rem;
+    padding: .75rem;
 }
 
 .wishlist-remove {
@@ -4810,7 +4839,9 @@ body > .ui-pnotify-modal-overlay {
     padding: 100px 0;
     position: relative;
 }
-
+.template-wrapper{
+    max-width: 800px
+}
 .template-banner:before {
     content: "";
     background: url(../images/banner-shadow.png) left center repeat-x;
@@ -4834,17 +4865,6 @@ body > .ui-pnotify-modal-overlay {
     position: relative;
     display: inline-block;
 }
-
-/*.section-title:before {
-    content: "";
-    display: block;
-    width: 4px;
-    height: 100%;
-    background: #7ebb09;
-    position: absolute;
-    float: left;
-    left: -15px;
-}*/
 .left-menu li {
     padding: 10px 15px;
     position: relative;
@@ -4865,6 +4885,19 @@ body > .ui-pnotify-modal-overlay {
     position: sticky;
     top: 0;
 }
+.topic-block-wrapper{
+    border: 1px solid #cacaca;
+    height: 100%;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.topic-block-wrapper:hover {
+
+}
+.topic-content{
+    padding: 0 10px;
+}
+
 
 /*Contact Page */
 .contact-wrapper{
@@ -4888,7 +4921,18 @@ body > .ui-pnotify-modal-overlay {
 }
 .address-list{
     background: #fff;
-    padding: 15px 10px;
+    max-height: 350px;
+    overflow-y: scroll;
+}
+.address-list::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+.address-list::-webkit-scrollbar-thumb {
+    background: #bbb;
+}
+.address-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 .address-list h5{
     font-weight: 500;
@@ -4916,6 +4960,7 @@ body > .ui-pnotify-modal-overlay {
 }
 .address-list .list-item{
     border-bottom: 1px solid #79bb05;
+    margin-right: 5px;
 }
 .address-list .list-item:last-child{
     border-bottom: 0;
