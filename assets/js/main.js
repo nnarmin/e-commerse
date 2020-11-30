@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 
     $(".scrollTop").click(function () {
@@ -28,18 +28,25 @@ $(document).ready(function() {
                 $this.parent(".category").addClass("sub-menu-open");
             },300);
         }else{*/
-            e.preventDefault();
-            $(".category").removeClass("sub-menu-open");
-            $(this).parent(".category").addClass("sub-menu-open");
+        e.preventDefault();
+        $(".category").removeClass("sub-menu-open");
+        $(this).parent(".category").addClass("sub-menu-open");
         /*}*/
 
     });
 
     $(".sub-menu-close").click(function () {
         $(this).parents(".category").removeClass("sub-menu-open");
-        if($("header").data("xs") === true ){
+        if ($("header").data("xs") === true) {
             $("header").addClass("sidebar-xs");
         }
+    });
+
+    $(".materials-info").hover(
+        function () {
+            $(this).find(".material-hover-block").fadeIn(300);
+        }, function () {
+            $(this).find(".material-hover-block").fadeOut(300);
     });
 
     /* Mobile Filter menu */
@@ -51,23 +58,23 @@ $(document).ready(function() {
         $(".mobile_filter_menu").removeClass("isActive");
     });
 
-    $(".address-list .list-item").on("click", function() {
-        if ($(this).hasClass("active")) {
-            $(this).removeClass("active");
-            $(this)
+    $(".address-list .list-item-inner-heading").on("click", function () {
+        if ($(this).parent(".list-item").hasClass("active")) {
+            $(this).parent(".list-item").removeClass("active");
+            $(this).parent(".list-item")
                 .find(".address-info")
                 .slideUp(200);
-            $(".address-list .list-item h5").find("i")
+            $(this).find("i")
                 .removeClass("icon-circle-down2")
                 .addClass("icon-circle-right2");
         } else {
-            $(".address-list .list-item h5").find("i")
-                .removeClass("icon-circle-down2")
-                .addClass("icon-circle-right2");
+            $(this).find("i")
+                .removeClass("icon-circle-right2")
+                .addClass("icon-circle-down2");
             $(".address-list .list-item").removeClass("active");
-            $(this).addClass("active");
+            $(this).parent(".list-item").addClass("active");
             $(".address-info").slideUp(200);
-            $(this)
+            $(this).parent(".list-item")
                 .find(".address-info")
                 .slideDown(200);
         }
@@ -144,7 +151,7 @@ $(document).ready(function() {
 
     $(".close-search-result").click(function () {
         $(".search-result-wrapper").removeClass("result-show");
-        if($("header").data("xs") === true ){
+        if ($("header").data("xs") === true) {
             $("header").addClass("sidebar-xs");
         }
         $(".search-input").val('');
@@ -188,7 +195,7 @@ $(document).ready(function() {
     /* Slides */
 
     /* top slide */
-    if($().owlCarousel){
+    if ($().owlCarousel) {
         $('.main-slider').owlCarousel({
             animateOut: 'fadeOut',
             smartSpeed: 1200,
@@ -199,7 +206,7 @@ $(document).ready(function() {
             loop: true,
             dots: true,
             nav: true,
-            navText:['<img src="assets/images/1x/left.png" width="20"/>','<img src="assets/images/1x/right.png"  width="20"/>'],
+            navText: ['<img src="assets/images/1x/left.png" width="20"/>', '<img src="assets/images/1x/right.png"  width="20"/>'],
         });
 
         $('.carousel-products').owlCarousel({
@@ -211,7 +218,7 @@ $(document).ready(function() {
             autoplayHoverPause: true,
             margin: 10,
             nav: true,
-            navText: ['<img src="assets/images/1x/white_left.png" width="15"/>','<img src="assets/images/1x/white_right.png"  width="15"/>'],
+            navText: ['<img src="assets/images/1x/white_left.png" width="15"/>', '<img src="assets/images/1x/white_right.png"  width="15"/>'],
             responsive: {
                 0: {
                     items: 1
@@ -235,7 +242,7 @@ $(document).ready(function() {
         return "" !== t ? 0 : t;
     }
 
-    if($().slider){
+    if ($().slider) {
         $(".slider-range").slider({
             range: !0,
             min: 0,
@@ -252,19 +259,19 @@ $(document).ready(function() {
     $("input[name=min_price]").change(function (e) {
         var t = $(this).val(),
             a = $("input[name=max_price]").val();
-        if(t > a){
+        if (t > a) {
             $(this).val(t);
             $("input[name=max_price]").val(a);
-            $(".slider-range").slider({ values: [t, a] });
+            $(".slider-range").slider({values: [t, a]});
         }
     });
 
     $("input[name=max_price]").change(function (e) {
         var t = $(this).val(),
             a = $("input[name=min_price]").val();
-        if(t < a){
+        if (t < a) {
             $(this).val(a);
-            $(".slider-range").slider({ values: [a, t] });
+            $(".slider-range").slider({values: [a, t]});
         }
     });
 
@@ -304,43 +311,43 @@ $(document).ready(function() {
         });
     }
 
-    function count_up($this){
-        var current_count=$this.prev("input[type='number']").val();
+    function count_up($this) {
+        var current_count = $this.prev("input[type='number']").val();
         $this.prev("input[type='number']").val(++current_count);
         return current_count;
     }
 
-    function count_down($this){
-        var current_count=$this.next("input[type='number']").val();
-        if($this.parent().hasClass("not-less-than-one") && current_count>1){
+    function count_down($this) {
+        var current_count = $this.next("input[type='number']").val();
+        if ($this.parent().hasClass("not-less-than-one") && current_count > 1) {
             $this.next("input[type='number']").val(--current_count);
-        }else if(!$this.parent().hasClass("not-less-than-one") && current_count>0){
+        } else if (!$this.parent().hasClass("not-less-than-one") && current_count > 0) {
             $this.next("input[type='number']").val(--current_count);
         }
         return current_count;
     }
 
     $(document).on("click", ".sub-product-count .count_up, .sub-product-count .count_down", function () {
-        var current_price_block=$(".price-current span"),
-            old_price_block=$(".price-old span"),
-            pr_price=$(this).parents(".sub-item-price-block").data("module-price"),
-            pr_old_price=$(this).parents(".sub-item-price-block").data("module-old-price"),
-            input_disabled=$(this).parent(".sub-product-count").find(".count-input").prop("disabled"),
-            state=$(this).parents(".sub-item-wrapper").attr("data-state");
+        var current_price_block = $(".price-current span"),
+            old_price_block = $(".price-old span"),
+            pr_price = $(this).parents(".sub-item-price-block").data("module-price"),
+            pr_old_price = $(this).parents(".sub-item-price-block").data("module-old-price"),
+            input_disabled = $(this).parent(".sub-product-count").find(".count-input").prop("disabled"),
+            state = $(this).parents(".sub-item-wrapper").attr("data-state");
 
-        if(!input_disabled){
-            if($(this).hasClass("count_up")){
-                var current_count=count_up($(this));
+        if (!input_disabled) {
+            if ($(this).hasClass("count_up")) {
+                var current_count = count_up($(this));
                 $(this).parents(".sub-item-wrapper").attr("data-state", 1);
                 current_price_block.text(((parseFloat(current_price_block.text()) + parseFloat(pr_price))));
                 old_price_block.text(((parseFloat(old_price_block.text()) + parseFloat(pr_old_price))));
-            }else if($(this).hasClass("count_down")){
-                var current_count=count_down($(this));
-                if(current_count > 0){
+            } else if ($(this).hasClass("count_down")) {
+                var current_count = count_down($(this));
+                if (current_count > 0) {
                     $(this).parents(".sub-item-wrapper").attr("data-state", 1);
                     current_price_block.text((parseFloat(current_price_block.text()) - parseFloat(pr_price)));
                     old_price_block.text(((parseFloat(old_price_block.text()) - parseFloat(pr_old_price))));
-                }else if(current_count == 0 && state == "1"){
+                } else if (current_count == 0 && state == "1") {
                     $(this).parents(".sub-item-wrapper").attr("data-state", 0);
                     current_price_block.text((parseFloat(current_price_block.text()) - parseFloat(pr_price)));
                     old_price_block.text((parseFloat(old_price_block.text()) - parseFloat(pr_old_price)));
@@ -353,21 +360,21 @@ $(document).ready(function() {
 
     $(".sub-item-included input[type='checkbox']").on("change", function () {
         var isEnabled = $(this).prop("checked");
-        var input_number=$(this).parents(".sub-item-wrapper").find(".count-input");
-        var sub_pr_price=$(this).parents(".sub-item-wrapper").find(".sub-item-price-block").attr("data-module-price");
-        var sub_pr_old_price=$(this).parents(".sub-item-wrapper").find(".sub-item-price-block").attr("data-module-old-price");
-        var product_price=$(".price-current span");
-        var product_old_price=$(".price-old span");
+        var input_number = $(this).parents(".sub-item-wrapper").find(".count-input");
+        var sub_pr_price = $(this).parents(".sub-item-wrapper").find(".sub-item-price-block").attr("data-module-price");
+        var sub_pr_old_price = $(this).parents(".sub-item-wrapper").find(".sub-item-price-block").attr("data-module-old-price");
+        var product_price = $(".price-current span");
+        var product_old_price = $(".price-old span");
 
-        var total_sub_price=input_number.val()*sub_pr_price;
-        var total_sub_old_price=input_number.val()*sub_pr_old_price;
+        var total_sub_price = input_number.val() * sub_pr_price;
+        var total_sub_old_price = input_number.val() * sub_pr_old_price;
 
-        if(isEnabled){
+        if (isEnabled) {
             input_number.prop("disabled", false);
             input_number.parent(".sub-product-count").css("background", "#ffffff");
             product_price.text(((parseFloat(product_price.text()) + parseFloat(total_sub_price))));
             product_old_price.text(((parseFloat(product_old_price.text()) + parseFloat(total_sub_old_price))));
-        }else{
+        } else {
             input_number.prop("disabled", true);
             input_number.parent(".sub-product-count").css("background", "#f0f0f0");
             product_price.text(((parseFloat(product_price.text()) - parseFloat(total_sub_price))));

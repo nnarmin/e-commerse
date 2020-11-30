@@ -96,7 +96,12 @@
     }
     .header-top-main{
         padding: 0 15px;
-        border-bottom: 1px solid #dedede;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: #fff;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06);
     }
     .header-logo img{
         max-width: 160px;
@@ -134,12 +139,14 @@
     }
     .content-wrapper{
         margin-left: 0;
+        padding-top: 50px;
     }
     .category-list{
         box-shadow: none;
     }
     .user-account{
         margin-right: 5px;
+        padding-top: 50px;
     }
     .user-account-header{
         cursor: pointer;
