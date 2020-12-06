@@ -7,7 +7,11 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-
+        if($(window).scrollTop()>250){
+            $(".scrollTop").addClass("show");
+        }else{
+            $(".scrollTop").removeClass("show");
+        }
     });
     /* Mobile menu */
     $(".sidebar-mobile-main-toggle").click(function () {

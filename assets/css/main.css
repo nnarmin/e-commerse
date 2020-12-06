@@ -108,7 +108,7 @@ ul {
 
 .scrollTop {
     position: fixed;
-    bottom: 20px;
+    bottom: 100px;
     right: 30px;
     width: 50px;
     height: 50px;
@@ -121,8 +121,17 @@ ul {
     align-items: center;
     color: white;
     cursor: pointer;
-    transform: translateY(100px);
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease-in-out;
     box-shadow: 0 1px 10px 1px rgba(39, 39, 39, 0.3);
+}
+
+.scrollTop.show{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 .scrollTop i {
@@ -5052,6 +5061,14 @@ body > .ui-pnotify-modal-overlay {
 .blog-grid-122{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
+}
+.blog-grid-113{
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+}
+.blog-grid-212{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
 }
 
 .blog-image{
